@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Quiz</title>
+    </h:head>
+    <h:body style="background: linear-gradient(to right,  #81F781 0%,#81F781 33%,#FFFFFF 33%,#FFFFFF 66%,#F7BE81 66%,#F7BE81 100%);">
+        Welcome to the Irish Quiz !! 
+        <br /><br />
+        Answer the 10 following questions to see how much you know about Ireland
+        <br /><br />
+        Good Luck !!
+        <br /><br /><br />
+
+        <h:form>
+
+            <p>Enter a user name with length between 3 and 10 characters</p>
+            <p><h:inputText id="string" value="#{myThirdBean.name}">
+                    <f:validateLength minimum="3" maximum="10"/>
+                </h:inputText></p>
+
+
+            <h:commandButton action="question1" value="Lets Go !!" />
+            <br/><br/><br />
+        </h:form>
+        
+        <h:form>
+            <h:commandButton action="/index" value="Return to Home" />
+        </h:form>
+        <br/>
+        This page has been accessed #{mySecondBean.quizHits} time(s) in this session.<br/>
+        There have been #{mySecondBean.totalHits} page(s) accessed in the session.
+
+    </h:body>
+</html>
+

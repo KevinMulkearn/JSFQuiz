@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Topic 6</title>
+    </h:head>
+    <h:body style="background-color:#FCF1F8;">
+        <h1>Three Forms of JSF Page Navigation:</h1>
+
+        <p>The there main types of navigation JSF page are:</p>
+        <ul>
+            <li>Implicit Navigation</li>
+            <li>Explicit Navigation</li>
+            <li>Auto-Navigation</li>
+        </ul>
+
+        <p><b>Implicit Navigation:</b><br />
+            <ul style="list-style-type:disc">
+                <li>Value ‘aaa’ of action attribute implicitly resolved to ‘aaa.xhtml’</li>
+                <li>There is no need to declare navigation rules</li>
+                <li>The outcome can be placed in the action attribute</li>
+                <li>There is less overhead when looking up the outcome for a action.</li>
+            </ul>
+        </p>
+
+        <p><b>Explicit Navigation:</b><br />
+            <ul style="list-style-type:disc">
+                <li>Navigation requires the use of explicit navigation cases</li>
+                <li>Explicit navigation rules can be defined in faces-config.xml</li>
+                <li>Only one location is used to set all navigation rules</li>
+                <li>Maps value from sources to specific targets</li>
+                <li>Need one mapping per page</li>
+                <li>Same value from different source can map to different target</li>
+            </ul>
+        </p>
+
+        <p><b>Auto-Navigation:</b><br />
+            <ul style="list-style-type:disc">
+                <li>String value ‘aaa’ of any bean interaction automatically resolved to ‘aaa.xhtml’</li>
+                <li>Useful for conditional navigation</li>
+                <li>very flexible conditional navigation rule to solve the complex page navigation flow</li>
+            </ul>
+        </p>
+        
+        <br/>
+        This page has been accessed #{mySecondBean.navigationHits} time(s) in this session.<br/>
+        There have been #{mySecondBean.totalHits} page(s) accessed in the session.<br/><br/>
+        
+        <h:form>
+            <a href="index.xhtml">Return Home</a>
+        </h:form>
+        
+
+    </h:body>
+</html>
+

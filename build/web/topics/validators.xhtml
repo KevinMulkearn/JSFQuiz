@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Topic 4</title>
+    </h:head>
+    <h:body style="background-color:#FCF1F8;">
+        <h1>Different Types of Validators:</h1>
+        
+        <p>The four possible JSF validator tags:</p>
+        <ul>
+            <li>f:validateLength</li>
+            <li>f:validateLongRange</li>
+            <li>f:validateDoubleRange</li>
+            <li>f:validateRegex</li>
+        </ul>
+        
+        <p><b>f:validateLength</b><br />
+            This tag is used to validate the length of a string value in a particular range.</p>
+        
+        <p><b>f:validateLongRange</b><br />
+            This tag is used to validate a long integer value in a particular range.</p>
+        
+        <p><b>f:validateDoubleRange</b><br />
+            This tag is used to validate a value to a range of float values.</p>
+        
+        <p><b>f:validateRegex</b><br />
+            This tag is used to validate a string value to a required format or according to regular expression.</p>
+        
+        <br /><br />
+        
+        <p>Inbuilt validators are used to validate length and type of input fields.</p>
+        <p>It is possible for a user to create custom validators.</p>
+        <p>Length/Range have "<i>minimum</i>" and "<i>maximum</i>" attribute.</p>
+        <p>Regex has "<i>pattern</i>" attribute holding regular expression as described in the <i>java.util.regex.Pattern</i> class.</p>
+        <p>Validators are part of JSF core tag library.</p>
+        
+        <br/>
+        This page has been accessed #{mySecondBean.validatorsHits} time(s) in this session.<br/>
+        There have been #{mySecondBean.totalHits} page(s) accessed in the session.<br/><br/>
+        
+        <h:form>
+            <a href="index.xhtml">Return Home</a>
+        </h:form>
+        
+    </h:body>
+</html>
+

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Question 4</title>
+    </h:head>
+    <h:body style="background-color:#FFE680;">
+        <h3>Which Irish Writer wrote the famous book 'Ulysses' ? </h3>
+
+        <h:form>
+            
+            
+       
+            <h:selectOneRadio value="#{myThirdBean.data4}">
+            <f:selectItem itemValue="James Joyce" itemLabel="James Joyce" />
+            <f:selectItem itemValue="Roddy Doyle" itemLabel="Roddy Doyle" />
+            <f:selectItem itemValue="Oscar Wilde" itemLabel="Oscar Wilde" />
+            <f:selectItem itemValue="Patrick Kavanagh" itemLabel="Patrick Kavanagh" />
+         </h:selectOneRadio>
+         <br/>   
+         <h:commandButton value="Next question" action="question5" />
+         <br/><br/>
+         #{myThirdBean.name} you are on question 4 of 10 
+         
+      </h:form>
+    </h:body>
+</html>
+

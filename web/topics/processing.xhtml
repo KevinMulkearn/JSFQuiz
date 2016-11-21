@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Topic 3</title>
+    </h:head>
+    <h:body style="background-color:#FCF1F8;">
+        <h1>Processing HTML form Data:</h1>
+        
+        <p>In order to process HTML code from data an EL is used.</p>
+        
+        <p>JSF provides a rich expression language.</p>
+        
+        <p>Expression Language (EL) Provides important mechanism for enabling 
+            presentation layer to communicate with managed beans.</p>
+        
+        <p>Normal operations can be written using the # {operation-expression} notation.</p>
+        
+        <p>EL provides a way to use simple expressions to perform the following tasks:
+        <ul>
+            <li>Dynamically read application data stored in JavaBeans components, various data structures, and implicit objects</li>
+            <li>Dynamically write data, such as user input into forms, to JavaBeans components</li>
+            <li>Invoke arbitrary static and public methods</li>
+            <li>Dynamically perform arithmetic, Boolean and String operations</li>
+            <li>Dynamically construct collection objects and perform operations on collections</li>
+        </ul>
+        </p>
+        
+        <br/>
+        This page has been accessed #{mySecondBean.processingHits} time(s) in this session.<br/>
+        There have been #{mySecondBean.totalHits} page(s) accessed in the session.<br/><br/>
+        
+        <h:form>
+            <a href="index.xhtml">Return Home</a>
+        </h:form>
+        
+    </h:body>
+</html>
+

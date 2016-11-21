@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Welcome</title>
+    </h:head>
+    <h:body style="background-color:#D5E6F6;">
+
+        <h2>EE6052 Web-based Application Design</h2><br />
+        <h3>Name: Kevin Mulkearn</h3>
+        <h3>ID: 11124725</h3><br />
+
+
+        <h:form>
+
+            <h3>Please Select a Topic from the List</h3>
+            <p></p>
+
+            <h:selectOneMenu value="#{myBean.currentPage}">
+                <f:selectItem itemValue="Scopes" itemLabel="Scopes of managed beans" />
+                <f:selectItem itemValue="Accessing" itemLabel="Accessing managed beans properties and methods" />
+                <f:selectItem itemValue="Processing" itemLabel="Processing HTML form data" />
+                <f:selectItem itemValue="Validators" itemLabel="Types of validators" />
+                <f:selectItem itemValue="Tables" itemLabel="Data tables" />
+                <f:selectItem itemValue="Navigation" itemLabel="Forms of JSF page navigation" />
+                <f:selectItem itemValue="Quiz" itemLabel="Take Quiz !!" />
+            </h:selectOneMenu>
+            <br/>
+            <h:commandButton value="Select" action="#{myBean.processPage()}"/>
+
+            <br /><br />
+
+
+        </h:form>
+
+
+        <h3>Used Technologies Locations:</h3>
+
+        <p>Request scoped managed bean = MyBean.java (line 16) located in source Packages </p>
+        <p>Session scoped managed bean = MyThirdBean.java (line 16) located in source Packages</p>
+        <p>Application scoped managed bean = MySecondBean.java (line 16) located in source Packages</p>
+        <p>Input field with a regular expression validator = quiz.xhtml (line 21) located in the quiz folder contains a f:validateLength expression</p>
+        <p>Navigation instance using implicit navigation = accessing.xhtml (line 31) located in the topics folder contains a  href="index.xhtml" function </p>
+        <p>Navigation instance using auto navigation = quiz.xhtml (line 30) located in the Web Pages folder contains commandButton for index page navigation</p>
+        <p>EL expression accessing a managed beans attribute = results.xhtml (line 13) located in the quiz folder, each user selected answer is an EL attribute </p>
+        <p>EL expression accessing a managed beans method that involves a parameter = results.xhtml (line 9) located in the quiz folder, name parameter called  </p><br />
+
+        <br /><br />
+            
+       
+        This page has been accessed #{mySecondBean.hits} time(s) in this session.<br/>
+        There have been #{mySecondBean.totalHits} page(s) accessed in the session.
+
+        <br /><br />
+
+    </h:body>
+</html>
+

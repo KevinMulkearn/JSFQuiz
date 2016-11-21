@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Question 7</title>
+    </h:head>
+    <h:body style="background-color:#FFE680;">
+        <h3>Who is the current president of Ireland (2016) ? </h3>
+
+        <h:form>
+            
+            
+       
+            <h:selectOneRadio value="#{myThirdBean.data7}">
+            <f:selectItem itemValue="Gerry Adams" itemLabel="Gerry Adams" />
+            <f:selectItem itemValue="Michael D. Higgins" itemLabel="Michael D. Higgins" />
+            <f:selectItem itemValue="Mary McAleese" itemLabel="Mary McAleese" />
+            <f:selectItem itemValue="Enda Kenny" itemLabel="Enda Kenny" />
+         </h:selectOneRadio>
+         <br/>   
+         <h:commandButton value="Next question" action="question8" />
+         <br/><br/>
+         #{myThirdBean.name} you are on question 7 of 10 
+         
+      </h:form>
+    </h:body>
+</html>
+

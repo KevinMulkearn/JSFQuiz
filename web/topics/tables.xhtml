@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Topic 5</title>
+    </h:head>
+    <h:body style="background-color:#FCF1F8;">
+        <h1>Creating Data Tables:</h1>
+
+        <p>The tag &lt;h:dataTable&gt; is used to represent data collections in tabular form.</p>
+        <p>The user only needs to specify each columns' information, the code automatically iterates through all elements to fill each row.</p>
+        <p>Elements within &lt;h:dataTable&gt; can be made active, active methods can be used to invoke procedures such as sorting, editing, and deleting.</p>
+        <p>Attribute value of &lt;h:dataTable&gt; indicates collection of data.</p>
+        <p>The basic structure of a dataTable is as follows:<br /><br />
+            
+            <code>
+            &lt;h:dataTable value= # {someBean.collection} var=ref&gt; <br />
+            &emsp;&ensp; &lt;h:column&gt;&lt;f:facet name=“header”&gt;title&lt;/facet&gt; <br />
+            &emsp;&ensp; &emsp;&ensp; # {ref.someattrib}&lt;/h:column&gt; <br />
+            &emsp;&ensp; &lt;h:column&gt;...&lt;/h:column&gt; <br />
+            &lt;/h:dataTable&gt;<br />
+            </code>
+            
+            
+        </p>
+        
+        <br/>
+        This page has been accessed #{mySecondBean.tablesHits} time(s) in this session.<br/>
+        There have been #{mySecondBean.totalHits} page(s) accessed in the session.<br/><br/>
+        
+        <h:form>
+            <a href="index.xhtml">Return Home</a>
+        </h:form>
+
+
+    </h:body>
+</html>
+

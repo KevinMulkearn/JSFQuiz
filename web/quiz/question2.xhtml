@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Question 2</title>
+    </h:head>
+    <h:body style="background-color:#FFE680;">
+        <h3>How many Counties are there on the island of Ireland ? </h3>
+
+        <h:form>
+            
+            
+       
+            <h:selectOneRadio value="#{myThirdBean.data2}">
+            <f:selectItem itemValue="20" itemLabel="20" />
+            <f:selectItem itemValue="26" itemLabel="26" />
+            <f:selectItem itemValue="32" itemLabel="32" />
+            <f:selectItem itemValue="38" itemLabel="38" />
+         </h:selectOneRadio>
+         <br/>   
+         <h:commandButton value="Next question" action="question3" />
+         <br/><br/>
+         #{myThirdBean.name} you are on question 2 of 10 
+         
+      </h:form>
+    </h:body>
+</html>
+

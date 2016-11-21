@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Question 5</title>
+    </h:head>
+    <h:body style="background-color:#FFE680;">
+        <h3>What does 'Erin go Bragh' mean ? </h3>
+
+        <h:form>
+            
+           
+       
+            <h:selectOneRadio value="#{myThirdBean.data5}">
+            <f:selectItem itemValue="Everyone is Irish" itemLabel="Everyone is Irish" />
+            <f:selectItem itemValue="Welcome to Ireland" itemLabel="Welcome to Ireland" />
+            <f:selectItem itemValue="Ireland Forever" itemLabel="Ireland Forever" />
+            <f:selectItem itemValue="People of Ireland" itemLabel="People of Ireland" />
+         </h:selectOneRadio>
+         <br/>   
+         <h:commandButton value="Next question" action="question6" />
+         <br/><br/>
+         #{myThirdBean.name} you are on question 5 of 10 
+         
+      </h:form>
+    </h:body>
+</html>
+

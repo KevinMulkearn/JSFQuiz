@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Topic 1</title>
+    </h:head>
+    <h:body style="background-color:#FCF1F8;">
+        <h1>Accessing managed beans properties and methods:</h1>
+
+        <p>A Managed Bean is a regular Java Bean registered and managed by JSF framework.</p>
+
+        <p>Managed Beans usually contains getter and setter methods, business logic, and/or HTML form values.</p>
+
+        <p>The Managed Bean works as a Model for UI components.</p>
+
+        <p>The Managed Bean Can be directly accessed from JSF pages through several navigation methods.</p>
+
+        <p>The annotation <i>@ManagedBean</i> defines bean as being managed:
+            <ul>
+                <li>Attribute <i>name</i> used to give specific name to a managed bean (class name is used as default).</li>
+                <li>Attribute <i>eager</i> set to true ensures bean is created before first request method.</li>
+            </ul>
+        </p>
+        
+        <br/>
+        This page has been accessed #{mySecondBean.accessingHits} time(s) in this session.<br/>
+        There have been #{mySecondBean.totalHits} page(s) accessed in the session.<br/><br/>
+
+        <h:form>
+            <a href="index.xhtml">Return Home</a>
+        </h:form>
+
+    </h:body>
+</html>
+

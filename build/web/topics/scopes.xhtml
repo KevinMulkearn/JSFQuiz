@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Topic 2</title>
+    </h:head>
+    <h:body style="background-color:#FCF1F8;">
+        <h1>Scopes of Managed Beans:</h1>
+
+        <p><b>@RequestScoped </b><br />
+            A request scoped bean lives the duration of a single HTTP request/response cycle.<br />
+            It is used for simple and non-ajax forms and presentations.</p>
+
+        <p><b>@SessionScoped</b><br /> 
+            A session scoped bean lives the duration of the established HTTP session <br />
+            and exists across multiple HTTP requests.<br />
+            It is used for client specific data, such as the logged-in user and user preferences.</p>
+
+        <p><b>@ApplicationScoped</b><br /> 
+            An application scoped bean lives the duration of the web application's run time, <br />
+            it exists for all users interacting with the web application.<br />
+            It is used for application wide data/constants, such as a dropdown list which is the same for all users.</p>
+
+        <p><b>@ViewScoped</b><br /> 
+            A view scoped bean lives as long as the user is interacting with the same JSF view <br />
+            by postbacks which call action methods returning null without any navigations or redirects.<br />
+            It is used for rich ajax-enabled dynamic views.</p>
+
+        <p><b>@NoneScoped</b><br /> 
+            A none scoped bean lives the duration of a single EL (Expression Language) evaluation <br />
+            (the bean is destroyed immediately after evaluation).</p>
+
+        <p><b>@CustomScoped</b><br /> 
+            A custom scoped bean can be defined in custom map by the user.<br />
+            It is used for special cases only.</p>
+
+        <br /><br />
+        
+        <br/>
+        This page has been accessed #{mySecondBean.scopesHits} time(s) in this session.<br/>
+        There have been #{mySecondBean.totalHits} page(s) accessed in the session.<br/><br/>
+        
+        <h:form>
+            <a href="index.xhtml">Return Home</a>
+        </h:form>
+       
+        
+    </h:body>
+</html>
+
